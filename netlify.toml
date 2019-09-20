@@ -1,0 +1,4 @@
+[dev]
+    command = "yarn develop"
+    port = 8080
+    publish = "_static"
