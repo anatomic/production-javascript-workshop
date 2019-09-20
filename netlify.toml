@@ -2,3 +2,12 @@
     command = "yarn develop"
     port = 8080
     publish = "_static"
+
+[build]
+    command = "yarn build"
+    publish = "_static"
+
+[[redirects]]
+    from = "/*"
+    to = "/slides.html"
+    status = 200
