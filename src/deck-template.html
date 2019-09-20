@@ -40,11 +40,8 @@
   </head>
   <body>
     <div class="reveal">
-      <div class="slides">
-        {{{slides}}}
-
-        <div class="footer">Ian Thomas | {{{title}}} | {{ date }}</div>
-      </div>
+      <div class="slides">{{{slides}}}</div>
+      <div class="footer">Ian Thomas | {{{title}}} | {{ date }}</div>
     </div>
 
     <script src="{{{base}}}/js/reveal.js"></script>
@@ -99,10 +96,11 @@
     <script>
       Reveal.initialize(options);
       // Reveal.addEventListener("ready", () => {
-      //   const f = document.querySelector("#footer");
-      //   [...document.querySelectorAll(".slide-background")].forEach(bg => {
-      //     const footer = document.importNode(f.content, true);
-      //     bg.appendChild(footer);
+      //   const footerTemplate = document.querySelector("#footer");
+      //   const slides = document.querySelectorAll(".slide-background");
+      //   [...slides].forEach(slide => {
+      //     const footer = document.importNode(footerTemplate.content, true);
+      //     slide.insertBefore(footer, slide.firstChild);
       //   });
       // });
     </script>
