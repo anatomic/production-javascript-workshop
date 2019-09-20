@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "reveal-md ./src/slides.md -w --disable-auto-open",
+    "start": "reveal-md ./src/slides.md",
+    "develop": "reveal-md ./src/slides.md -w --disable-auto-open",
     "build": "reveal-md ./src/slides.md --static",
     "pdf": "reveal-md ./src/slides.md --print --print-size 1280x720"
   },
