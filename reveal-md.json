@@ -1,0 +1,8 @@
+{
+  "template": "./src/deck-template.html",
+  "css": "./src/theme.css",
+  "disableAutoOpen": true,
+  "port": 8080,
+  "preprocessor": "./src/preprocess.js",
+  "verticalSeparator": "<!--v-->"
+}

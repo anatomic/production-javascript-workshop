@@ -1,0 +1,15 @@
+{
+  "name": "production-javascript-workshop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "reveal-md ./src/slides.md -w --disable-auto-open",
+    "build": "reveal-md ./src/slides.md --static",
+    "pdf": "reveal-md ./src/slides.md --print --print-size 1280x720"
+  },
+  "dependencies": {
+    "node-emoji": "^1.10.0",
+    "reveal-md": "^3.0.11"
+  }
+}
