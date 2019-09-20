@@ -192,9 +192,9 @@ In addition to block scoping and not creating properties on the `window` object,
 
 ```JavaScript
 "b" + "a" + +"a" + "a" // 'baNaNa'
-```
 
-[Hat tip to wtfjs](https://github.com/denysdovhan/wtfjs)
+// Find this and more at https://github.com/denysdovhan/wtfjs
+```
 
 ---
 

@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
     <title>{{{title}}}</title>
     {{#absoluteUrl}}
@@ -14,24 +17,40 @@
     <link rel="stylesheet" href="{{{base}}}/css/reveal.css" />
     <link rel="stylesheet" href="{{{base}}}/{{{themeUrl}}}" id="theme" />
     <link rel="stylesheet" href="{{{base}}}{{{highlightThemeUrl}}}" />
-    <link rel="stylesheet" href="{{{base}}}/css/print/{{#print}}pdf{{/print}}{{^print}}paper{{/print}}.css" type="text/css" media="print" />
+    <link
+      rel="stylesheet"
+      href="{{{base}}}/css/print/{{#print}}pdf{{/print}}{{^print}}paper{{/print}}.css"
+      type="text/css"
+      media="print"
+    />
     {{#cssPaths}}
     <link rel="stylesheet" href="{{{base}}}/{{{.}}}" />
     {{/cssPaths}}
 
     {{#watch}}
     <script>
-      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');
+      document.write(
+        '<script src="http://' +
+          (location.host || "localhost").split(":")[0] +
+          ':35729/livereload.js?snipver=1"></' +
+          "script>"
+      );
     </script>
     {{/watch}}
   </head>
   <body>
     <div class="reveal">
-      <div class="slides">{{{slides}}}</div>
-      <div class="footer">Ian Thomas | {{{title}}} | {{date}}</div>
+      <div class="slides">
+        {{{slides}}}
+
+        <div class="footer">Ian Thomas | {{{title}}} | {{ date }}</div>
+      </div>
     </div>
 
     <script src="{{{base}}}/js/reveal.js"></script>
+    <template id="footer" style="display: none;">
+      <div class="footer">Ian Thomas | {{{title}}} | {{ date }}</div>
+    </template>
 
     <script>
       function extend() {
@@ -79,6 +98,13 @@
 
     <script>
       Reveal.initialize(options);
+      // Reveal.addEventListener("ready", () => {
+      //   const f = document.querySelector("#footer");
+      //   [...document.querySelectorAll(".slide-background")].forEach(bg => {
+      //     const footer = document.importNode(f.content, true);
+      //     bg.appendChild(footer);
+      //   });
+      // });
     </script>
   </body>
 </html>
